@@ -44,7 +44,7 @@ export const Image = styled.div`
 export const FormDiv = styled.div`
   width: 40%;
   height: 100%;
-  background-color: #6666;
+  background-color: #444444;
 
   display: flex;
   align-items: center;
@@ -104,13 +104,33 @@ export const Button = styled.button`
   }
 `;
 
+export const CreateAccount = styled.button`
+  width: 40%;
+  height: 40px;
+  border-radius: 5px;
+  border-style: none;
+  background: transparent;
+  margin-top: 15px;
+  transition: ease-in-out 0.2s;
+  font-size: 16px;
+  color: #fff;
+
+  :hover {
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+  }
+
+  @media (max-width: 990px) {
+    width: 25%;
+    height: 40px;
+  }
+`;
+
 export const DivIcons = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 `;
 
 export const ImageLogo = styled.img`

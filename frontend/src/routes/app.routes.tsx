@@ -1,15 +1,15 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Dashboard } from "../pages/dashboard";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { Login } from "../pages/login";
+import { Table } from "../pages/tableUser";
+import { NotAdministrator } from "../pages/commomUser";
+import { Home } from "../pages/dashboard";
 
 export const AppRoutes = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/" element={<Login />} />
-      </Routes>
-    </BrowserRouter>
+    <Switch>
+      <Route path="/dashboard" component={Home} />
+      <Redirect to="/dashboard" />
+    </Switch>
   );
 };

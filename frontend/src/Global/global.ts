@@ -1,20 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-    :root {
-        --background: #F0F2F5;
-        --red: #e52e4d;
-        --blue: #5429cc;
-        --green: #33cc95;
-
-        --blue-ligth: #6933ff;
-
-        --text-title: #363f5f;
-        --text-body: #969cb3;
-
-        --shape: #ffffff;
-    }
-    
     * {
         margin: 0;
         padding: 0;
@@ -29,11 +15,6 @@ export const GlobalStyle = createGlobalStyle`
         @media (max-width: 720px){
             font-size: 87.5%;
         }
-    }
-
-    body {
-        background-color: var(--background);
-        -webkit-font-smoothing: antialiased;
     }
 
     body, button, input, textarea {

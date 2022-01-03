@@ -1,0 +1,275 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Mind Dashboard Documentation",
+        "description": "API with CRUD for seletive process for Mind Consulting",
+        "version": "1.0.0",
+        "contact": {
+            "email": "guibersi.13@outlook.com"
+
+        }
+    },
+    "paths": {
+        "/users/create": {
+            "post": {
+                "tags": ["Users"],
+                "summary": "Create a User",
+                "description": "Create a new User",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "cpf": {
+                                        "type": "string"
+                                    },
+                                    "administrator": {
+                                        "type": "boolean"
+                                    },
+                                    "active": {
+                                        "type": "boolean"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    },
+                                    "avatar": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized, Token Missing, Invalid Token, User Already exists, User not exists"
+                    },
+                    "204": {
+                        "description": "Sucess/No Content"
+                    }
+                }
+            }
+        },
+        "/users/list": {
+            "get" : {
+                "tags": ["List Users"],
+                "summary": "List all Users",
+                "description": "List all Users",
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized, Token Missing, Invalid Token, User Already exists, User not exists"
+                    },
+                    "204": {
+                        "description": "Sucess/No Content"
+                    },
+                    "200": {
+                        "descripiton": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "email": {
+                                                "type": "string"
+                                            },
+                                            "cpf": {
+                                                "type": "string"
+                                            },
+                                            "administrator": {
+                                                "type": "boolean"
+                                            },
+                                            "active": {
+                                                "type": "boolean"
+                                            },
+                                            "password": {
+                                                "type": "string"
+                                            },
+                                            "avatar": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/users/edit/:id": {
+            "put": {
+                "tags": ["Edit Users"],
+                "summary": "Edit User",
+                "description": "Edit User",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "cpf": {
+                                        "type": "string"
+                                    },
+                                    "administrator": {
+                                        "type": "boolean"
+                                    },
+                                    "active": {
+                                        "type": "boolean"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    },
+                                    "avatar": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthorized, Token Missing, Invalid Token, User Already exists, User not exists"
+                    },
+                    "204": {
+                        "description": "Sucess/No Content"
+                    }
+                }
+            }
+        },
+        "/users/me/:email": {
+            "get" : {
+                "tags": ["List user by email"],
+                "summary": "List user by email",
+                "description": "List user by email",
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized, Token Missing, Invalid Token, User Already exists, User not exists"
+                    },
+                    "204": {
+                        "description": "Sucess/No Content"
+                    },
+                    "200": {
+                        "descripiton": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "email": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/users/delete/:id": {
+            "delete" : {
+                "tags": ["Delete User"],
+                "summary": "Delete User",
+                "description": "Delete User",
+                "responses": {
+                    "201": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthorized, Token Missing, Invalid Token, User Already exists, User not exists"
+                    },
+                    "204": {
+                        "description": "Sucess/No Content"
+                    },
+                    "200": {
+                        "descripiton": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }, 
+        "/users/avatar": {
+            "patch": {
+                "tags": ["Update Avatar user"],
+                "summary": "Update Avatar user",
+                "description": "Update Avatar user",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "avatar": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthorized, Token Missing, Invalid Token, User Already exists, User not exists"
+                    },
+                    "204": {
+                        "description": "Sucess/No Content"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,15 +1,20 @@
 # dashboard-mind
 Dashboard para controle de usuários cadastrados, onde há dois tipos de usuários com permissões diferentes.
 <h1>Página de Login</h1>
-<img src="https://files.fm/thumb_show.php?i=fm3j9pmsf" alt="My cool logo"/>
+<img src="https://files.fm/thumb_show.php?i=v7hmszmnm" alt="My cool logo"/>
 
 - Caso o usuário queira cadastrar um usuário para ter acesso a plataforma basta clicar em "Create Account" logo abaixo do botão
 
-<img src="https://files.fm/thumb_show.php?i=z7mwt76wg" alt="My cool logo"/>
+<img src="https://files.fm/thumb_show.php?i=k6772a5me" alt="My cool logo"/>
 
 - Quando clicado irá nos apresentar um modal com o formulário para ser preenchido, logo após liberando para fazer o Login com Email ou CPF cadastrado
 
 <img src="https://files.fm/thumb_show.php?i=2gsbak6fg" alt="My cool logo"/>
+
+- E temos a opção de entrar com Email ou CPF(com pontos e traço)
+
+<img src="https://files.fm/thumb_show.php?i=m39xf4th6" alt="My cool logo"/>
+
 
 <h1>Usuário Comum</h1>
 Usuário Comum - Um usuário comum pode apenas visualizar seus campos cadastrados e edita-los e alterar avatar.
@@ -25,11 +30,11 @@ Usuário Comum - Um usuário comum pode apenas visualizar seus campos cadastrado
 <h1>Usuário Administrador</h1>
 Usuário Administrador - Um usuário administrador pode visualizar uma lista onde contém todos os usuários cadastrados, nessa lista também é possível editar, deletar, adicionar um usuário novo e alterar foto de perfil de cada usuário.
 
-<img src="https://files.fm/thumb_show.php?i=zmsd5fqjf" alt="My cool logo"/>
+<img src="https://files.fm/thumb_show.php?i=4aacjnw92" alt="My cool logo"/>
 
-- Em cada linha de usuário há 3 campos onde podemos editar, deletar e alterar o avatar de um usuário
+- Em cada linha de usuário há 3 ações onde podemos editar, deletar e alterar o avatar de um usuário
 
-<img src="https://files.fm/thumb_show.php?i=zaj68p299" alt="My cool logo"/>
+<img src="https://files.fm/thumb_show.php?i=ptrdpau5x" alt="My cool logo"/>
 
 - Quando cliclamos em editar, ele abre um modal com todas as informações do usuário e caso o usuário deseje editar é só alterar os campos e clicar em enviar
 
@@ -42,7 +47,7 @@ Usuário Administrador - Um usuário administrador pode visualizar uma lista ond
 
 - Também há um botão onde o próprio Administrador pode criar um usuário novo caso deseje, quando clicamos nele ele abre novamente um modal para preenchermos o formulário
 
-<img src="https://files.fm/thumb_show.php?i=37wpknbb3" alt="My cool logo"/>
+<img src="https://files.fm/thumb_show.php?i=u9788tpxj" alt="My cool logo"/>
 
 
 <h2>CRUD Básico</h2>
